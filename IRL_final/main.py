@@ -15,16 +15,11 @@ test = our_data[len(our_data)-1]
 our_data.pop()
 
 images = []
-
-for entry in our_data:
-    images.append(entry["image"])
-    
-    
 bboxes = []
 
 for entry in our_data:
+    images.append(entry["image"])
     bboxes.append(entry["bbox"])
-
 
 # Train reward model using GAIL
 reward_net = RewardNetwork()
@@ -37,5 +32,4 @@ print("Training Detection Model using the Reward model")
 train_detection_model(detector, reward_net, images)
 
 # Test & visualize results
-# test_img, test_bbox = load_data(1)
 visualize_predictions(detector, test["image"], test["bbox"])

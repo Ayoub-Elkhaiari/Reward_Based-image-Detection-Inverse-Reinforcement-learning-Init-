@@ -28,7 +28,7 @@ def visualize_predictions(detector, test_image, test_bbox):
     cv2.rectangle(img_with_boxes, (test_bbox[0], test_bbox[1]), (test_bbox[2], test_bbox[3]), (0, 255, 0), 2)
     cv2.rectangle(img_with_boxes, (pred_bbox[0], pred_bbox[1]), (pred_bbox[2], pred_bbox[3]), (0, 0, 255), 2)
 
-    plt.imshow(img_with_boxes)
+    plt.imshow(cv2.cvtColor(img_with_boxes, cv2.COLOR_BGR2RGB))
     plt.title(f"Expert BBox (Green): {test_bbox}\nPredicted BBox (Red): {pred_bbox}")
     plt.show()
 
