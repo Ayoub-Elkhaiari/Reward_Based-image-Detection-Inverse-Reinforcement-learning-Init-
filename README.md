@@ -272,21 +272,21 @@ For each image:
 2. Generate candidate bounding boxes via grid sampling.
 3. Compute feature difference vectors:
 
-\[
-\phi(s, a_{expert}) - \phi(s, a_{candidate})
-\]
+
+ $$phi(s, a_{expert}) - \phi(s, a_{candidate})$$
+
 
 4. Solve the following convex problem:
 
-\[
-\min_\theta \frac{1}{2} \|\theta\|^2 + C \sum_i \xi_i
-\]
+
+$$min_\theta \frac{1}{2} \|\theta\|^2 + C \sum_i \xi_i$$
+
 
 Subject to:
 
-\[
-X\theta \ge 1 - \xi, \quad \xi \ge 0
-\]
+
+$$X\theta \ge 1 - \xi, \quad \xi \ge 0$$
+
 
 Where:
 - \( \theta \) = reward parameter vector  
