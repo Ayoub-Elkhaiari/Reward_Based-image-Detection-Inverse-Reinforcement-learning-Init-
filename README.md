@@ -89,9 +89,7 @@ Implements **Maximum Entropy Inverse Reinforcement Learning**.
 
 Learn a reward function \( R_\theta(s, a) \) such that expert bounding boxes are exponentially more likely than alternatives:
 
-\[
-P(a|s) \propto \exp(R_\theta(s, a))
-\]
+$$P(a|s) \propto \exp(R_\theta(s, a))$$
 
 ### Characteristics
 
