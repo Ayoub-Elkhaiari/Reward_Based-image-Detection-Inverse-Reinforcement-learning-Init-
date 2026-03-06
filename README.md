@@ -289,10 +289,10 @@ $$X\theta \ge 1 - \xi, \quad \xi \ge 0$$
 
 
 Where:
-- \( \theta \) = reward parameter vector  
-- \( X \) = matrix of feature differences  
-- \( \xi \) = slack variables  
-- \( C \) = regularization parameter  
+- $$\theta$$ = reward parameter vector  
+- $$X$$ = matrix of feature differences  
+- $$\xi$$ = slack variables  
+- $$C$$ = regularization parameter  
 
 This ensures expert actions receive higher reward than alternatives with a margin.
 
@@ -303,9 +303,9 @@ This ensures expert actions receive higher reward than alternatives with a margi
 This formulation is equivalent to a **structured max-margin reward learning problem**, where:
 
 - The reward function is linear:  
-  \[
-  R(s, a) = \theta^T \phi(s, a)
-  \]
+ 
+  $$R(s, a) = \theta^T \phi(s, a)$$
+  
 
 - The optimal solution is globally optimal due to convexity.
 - No adversarial instability.
